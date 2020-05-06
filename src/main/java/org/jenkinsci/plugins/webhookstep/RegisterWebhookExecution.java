@@ -1,13 +1,12 @@
 package org.jenkinsci.plugins.webhookstep;
 
+import java.net.URLEncoder;
+import javax.inject.Inject;
 import org.apache.commons.lang.StringUtils;
 import org.jenkinsci.plugins.workflow.steps.StepContext;
-import org.jenkinsci.plugins.workflow.steps.SynchronousStepExecution;
+import org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution;
 
-import javax.inject.Inject;
-import java.net.URLEncoder;
-
-public class RegisterWebhookExecution extends SynchronousStepExecution<WebhookToken> {
+public class RegisterWebhookExecution extends SynchronousNonBlockingStepExecution<WebhookToken> {
 
     private static final long serialVersionUID = -6718328636399912927L;
 
